@@ -3,101 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liên hệ · Dịt Molly</title>
-<link rel="icon" href="../assets/logo-ca.png" type="image/svg+xml">
+<title>Liên hệ — Dịt Molly</title>
+<meta name="description" content="Liên hệ đặt cá Molly tại Dịt Molly qua Zalo, điện thoại, hoặc gửi form đặt cá trực tuyến.">
+<link rel="icon" href="../assets/logo-ca.png">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav">
+  <nav class="nav wrap">
     <a href="../index.html" class="brand">
-      <img src="../assets/logo-ca.png" alt="">
-      <span class="brand-name">Molly<span>Aqua</span></span>
+      <img src="../assets/logo-ca.png" alt="Logo Dịt Molly: vịt ôm cá">
+      <span class="brand-text"><strong>Dịt Molly</strong><span>Trại cá bột</span></span>
     </a>
     <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
     <ul class="nav-links">
       <li><a href="../index.html">Trang chủ</a></li>
-      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
       <li><a href="san-pham.html">Sản phẩm</a></li>
+      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
       <li><a href="lien-he.html" class="active">Liên hệ</a></li>
     </ul>
+    <a href="lien-he.html" class="nav-cta">Đặt cá ngay</a>
   </nav>
 </header>
 
 <section class="page-hero">
-  <div class="container">
-    <span class="eyebrow" style="color:var(--fin-gold)">Kết nối với Molly Aqua</span>
-    <h1>Cần tư vấn chọn dòng Molly phù hợp?</h1>
-    <p>Để lại thông tin, đội ngũ Molly Aqua sẽ gọi lại tư vấn kích thước bể, số lượng và cách phối màu.</p>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Trang chủ</a> / Liên hệ</div>
+    <span class="eyebrow">Đặt cá / hỏi giá sỉ</span>
+    <h1>Nhắn cho dịt để canh khay đúng dòng</h1>
+    <p>Điền form bên dưới hoặc nhắn trực tiếp qua Zalo — dịt phản hồi trong ngày để sắp lịch vớt cá và đóng oxy giao đi.</p>
   </div>
 </section>
 
-<section>
-  <div class="container">
+<section class="section">
+  <div class="wrap">
     <div class="contact-grid">
-      <form data-contact-form novalidate>
-        <div class="field">
-          <label for="name">Họ và tên</label>
-          <input type="text" id="name" name="name" placeholder="Nguyễn Văn A">
-        </div>
-        <div class="field">
-          <label for="phone">Số điện thoại</label>
-          <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx">
-        </div>
-        <div class="field">
-          <label for="topic">Bạn quan tâm đến</label>
-          <select id="topic" name="topic">
-            <option>Molly Đen Nhung</option>
-            <option>Molly Vàng Chanh</option>
-            <option>Molly Dalmatian</option>
-            <option>Molly Balloon</option>
-            <option>Molly Lyretail</option>
-            <option>Molly Sailfin</option>
-            <option>Chưa rõ, cần tư vấn</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Lời nhắn</label>
-          <textarea id="message" name="message" rows="4" placeholder="Bể của mình khoảng 60cm, muốn nuôi 6 con Molly..."></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Gửi yêu cầu tư vấn</button>
-        <p class="form-note" data-form-note></p>
-      </form>
-
       <div class="contact-card">
-        <h3>Thông tin trại cá</h3>
-        <div class="line">📍 Trại cá Dịt Molly, Sóc Trăng</div>
-        <div class="line">📞 090 000 0000 (Zalo / gọi trực tiếp)</div>
-        <div class="line">✉️ [email protected]</div>
-        <div class="line">🕒 8:00 - 20:00, tất cả các ngày trong tuần</div>
-        <p style="margin-top:18px;color:rgba(243,238,225,.65);font-size:.85rem">Ưu tiên nhắn Zalo kèm ảnh bể hiện tại để được tư vấn dòng Molly phù hợp nhất.</p>
+        <h2 style="font-size:1.4rem; margin-bottom:6px;">Gửi yêu cầu đặt cá</h2>
+        <p style="color:var(--ink-soft); font-size:0.92rem; margin-bottom:22px;">Điền đủ thông tin để dịt gọi lại đúng số, đúng dòng cá bạn cần.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Họ và tên</label>
+            <input type="text" id="f-name" name="name" data-required placeholder="Nguyễn Văn A">
+            <span class="field-error">Vui lòng nhập họ tên.</span>
+          </div>
+
+          <div class="field">
+            <label for="f-phone">Số điện thoại / Zalo</label>
+            <input type="tel" id="f-phone" name="phone" data-required placeholder="090 000 1234">
+            <span class="field-error">Số điện thoại chưa đúng định dạng.</span>
+          </div>
+
+          <div class="field">
+            <label for="f-fish">Dòng cá quan tâm</label>
+            <select id="f-fish" name="fish">
+              <option value="vang">DM-01 Molly Vàng</option>
+              <option value="chanh">DM-02 Molly Chanh</option>
+              <option value="sakura">DM-03 Molly Sakura</option>
+              <option value="ho">DM-04 Molly Hổ</option>
+              <option value="trang">DM-05 Molly Trắng</option>
+              <option value="chua-ro">Chưa rõ, nhờ dịt tư vấn</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Lời nhắn (số lượng cần, khu vực giao...)</label>
+            <textarea id="f-msg" name="message" rows="4" data-required placeholder="Ví dụ: cần 15 cặp Molly Sakura, giao về Cần Thơ"></textarea>
+            <span class="field-error">Vui lòng cho dịt biết bạn cần gì.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Gửi yêu cầu</button>
+          <div class="form-status" role="status"></div>
+        </form>
+      </div>
+
+      <div>
+        <h2 style="font-size:1.4rem;">Thông tin trại</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">☎</span>
+            <div><strong>Điện thoại / Zalo</strong>0327444643</div>
+          </li>
+          <li>
+            <span class="contact-icon">✉</span>
+            <div><strong>Email</strong>ditmolly.trai@gmail.com</div>
+          </li>
+          <li>
+            <span class="contact-icon">⌂</span>
+            <div><strong>Địa chỉ</strong>Xã An Thạnh,TP Cần Thơ</div>
+          </li>
+          <li>
+            <span class="contact-icon">⏱</span>
+            <div><strong>Giờ đón khách</strong>7:00 – 19:00 mỗi ngày, kể cả cuối tuần</div>
+          </li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Vinh%20Long%2C%20Vietnam&output=embed"
+            width="100%" height="260" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bản đồ vị trí trại Dịt Molly"></iframe>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h4>Dịt Molly</h4>
-        <p style="max-width:32ch;color:rgba(243,238,225,.65)">Trại cá Molly cảnh - nhân giống, tuyển lọc và giao hàng toàn quốc.</p>
+        <div class="footer-brand">
+          <img src="../assets/logo-ca.png" alt="Logo Dịt Molly">
+          <strong>Dịt Molly</strong>
+        </div>
+        <p>Trại cá Molly bột gây giống tại nhà — chọn kỹ từng con trước khi tới tay người nuôi.</p>
       </div>
       <div>
         <h4>Điều hướng</h4>
-        <a href="../index.html">Trang chủ</a>
-        <a href="gioi-thieu.html">Giới thiệu</a>
-        <a href="san-pham.html">Sản phẩm</a>
-        <a href="lien-he.html">Liên hệ</a>
+        <ul>
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a href="san-pham.html">Sản phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dòng cá</h4>
+        <ul>
+          <li>DM-01 Molly Vàng</li>
+          <li>DM-02 Molly Chanh</li>
+          <li>DM-03 Molly Sakura</li>
+          <li>DM-04 Molly Hổ</li>
+          <li>DM-05 Molly Trắng</li>
+        </ul>
       </div>
       <div>
         <h4>Liên hệ</h4>
-        <a href="tel:0900000000">090 000 0000</a>
-        <a href="mailto:[email protected]">[email protected]</a>
+        <ul>
+          <li>Zalo/ĐT:0327444643</li>
+          <li>TP Cần Thơ</li>
+          <li>7:00 – 19:00 mỗi ngày</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Dịt Molly. Dự án demo bán cá cảnh.</div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Dịt Molly. Đồ án kết thúc môn.</span>
+    </div>
   </div>
 </footer>
 

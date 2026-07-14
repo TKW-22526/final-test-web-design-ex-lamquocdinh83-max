@@ -3,71 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sản phẩm · Dịt Molly</title>
-<link rel="icon" href="../assets/logo-ca.svg" type="image/svg+xml">
+<title>Sản phẩm — Dịt Molly</title>
+<meta name="description" content="Toàn bộ 5 dòng cá Molly đang có tại trại Dịt Molly: Vàng, Chanh, Sakura, Hổ, Trắng. Giá lẻ và giá sỉ.">
+<link rel="icon" href="../assets/logo-ca.png">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="nav">
+  <nav class="nav wrap">
     <a href="../index.html" class="brand">
-      <img src="../assets/logo-ca.png" alt="">
-      <span class="brand-name">Molly<span>Aqua</span></span>
+      <img src="../assets/logo-ca.png" alt="Logo Dịt Molly: vịt ôm cá">
+      <span class="brand-text"><strong>Dịt Molly</strong><span>Trại cá bột</span></span>
     </a>
     <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
     <ul class="nav-links">
       <li><a href="../index.html">Trang chủ</a></li>
-      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
       <li><a href="san-pham.html" class="active">Sản phẩm</a></li>
+      <li><a href="gioi-thieu.html">Giới thiệu</a></li>
       <li><a href="lien-he.html">Liên hệ</a></li>
     </ul>
+    <a href="lien-he.html" class="nav-cta">Đặt cá ngay</a>
   </nav>
 </header>
 
 <section class="page-hero">
-  <div class="container">
-    <span class="eyebrow" style="color:var(--fin-gold)">Danh mục</span>
-    <h1>Các dòng Molly đang có tại trại</h1>
-    <p>Lọc theo phong cách: cổ điển, độc lạ hoặc vây dài để tìm dòng Molly hợp bể của bạn.</p>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Trang chủ</a> / Sản phẩm</div>
+    <span class="eyebrow">Bảng giá &amp; tình trạng khay</span>
+    <h1>Toàn bộ đàn cá đang có</h1>
+    <p>Giá tính theo cặp, cá size 2–3cm, đã cách ly đủ ngày. Mua từ 25 cặp trở lên được báo giá sỉ riêng, nhắn Zalo để dịt tính giúp.</p>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="filter-bar" data-filter-bar>
-      <button class="filter-btn active" data-group="all">Tất cả</button>
-      <button class="filter-btn" data-group="co-dien">Cổ điển</button>
-      <button class="filter-btn" data-group="doc-la">Độc lạ</button>
-      <button class="filter-btn" data-group="vay-dai">Vây dài</button>
+<section class="section">
+  <div class="wrap">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Tất cả (5)</button>
+      <button class="filter-btn" data-filter="vang">Molly Vàng</button>
+      <button class="filter-btn" data-filter="chanh">Molly Chanh</button>
+      <button class="filter-btn" data-filter="sakura">Molly Sakura</button>
+      <button class="filter-btn" data-filter="ho">Molly Hổ</button>
+      <button class="filter-btn" data-filter="trang">Molly Trắng</button>
     </div>
-    <div class="grid grid-3" data-product-grid></div>
+
+    <div class="tag-grid">
+      <article class="fish-tag" data-category="vang">
+        <div class="fish-tag-string"></div>
+        <div class="fish-tag-photo">
+          <div class="fish-tag-photo-inner">
+            <img src="../assets/mollygold.jpg" alt="Molly Vàng trong khay lưới" data-lightbox="../assets/mollygold.jpg">
+          </div>
+          <span class="fish-tag-code">DM-01</span>
+        </div>
+        <div class="fish-tag-body">
+          <h3>Molly Vàng</h3>
+          <span class="price">30.000₫ / cặp</span>
+          <p>Còn hàng — khoảng 150 cặp trong khay.</p>
+          <div class="fish-tag-cta"><a href="chi-tiet.html" class="btn btn-sm btn-dark">Xem chi tiết</a></div>
+        </div>
+      </article>
+
+      <article class="fish-tag" data-category="chanh">
+        <div class="fish-tag-string"></div>
+        <div class="fish-tag-photo">
+          <div class="fish-tag-photo-inner">
+            <img src="../assets/mollylemon.jpg" alt="Molly Chanh trong khay lưới" data-lightbox="../assets/mollylemon.jpg">
+          </div>
+          <span class="fish-tag-code">DM-02</span>
+        </div>
+        <div class="fish-tag-body">
+          <h3>Molly Chanh</h3>
+          <span class="price">28.000₫ / cặp</span>
+          <p>Còn hàng — khoảng 90 cặp trong khay.</p>
+          <div class="fish-tag-cta"><a href="chi-tiet.html" class="btn btn-sm btn-dark">Xem chi tiết</a></div>
+        </div>
+      </article>
+
+      <article class="fish-tag" data-category="sakura">
+        <div class="fish-tag-string"></div>
+        <div class="fish-tag-photo">
+          <div class="fish-tag-photo-inner">
+            <img src="../assets/mollysakura.jpg" alt="Molly Sakura trong vợt lưới" data-lightbox="../assets/mollysakura.jpg">
+          </div>
+          <span class="fish-tag-code">DM-03</span>
+        </div>
+        <div class="fish-tag-body">
+          <h3>Molly Sakura</h3>
+          <span class="price">36.000₫ / cặp</span>
+          <p>Sắp hết — chỉ còn khoảng 30 cặp lứa này.</p>
+          <div class="fish-tag-cta"><a href="chi-tiet.html" class="btn btn-sm btn-dark">Xem chi tiết</a></div>
+        </div>
+      </article>
+
+      <article class="fish-tag" data-category="ho">
+        <div class="fish-tag-string"></div>
+        <div class="fish-tag-photo">
+          <div class="fish-tag-photo-inner">
+            <img src="../assets/mollytiger.jpg" alt="Molly Hổ trong khay tròn" data-lightbox="../assets/mollytiger.jpg">
+          </div>
+          <span class="fish-tag-code">DM-04</span>
+        </div>
+        <div class="fish-tag-body">
+          <h3>Molly Hổ</h3>
+          <span class="price">40.000₫ / cặp</span>
+          <p>Dòng hiếm — mỗi lứa chỉ ra khoảng 20 cặp đạt chuẩn.</p>
+          <div class="fish-tag-cta"><a href="chi-tiet.html" class="btn btn-sm btn-dark">Xem chi tiết</a></div>
+        </div>
+      </article>
+
+      <article class="fish-tag" data-category="trang">
+        <div class="fish-tag-string"></div>
+        <div class="fish-tag-photo">
+          <div class="fish-tag-photo-inner">
+            <img src="../assets/mollytrang.jpg" alt="Molly Trắng trong khay lưới" data-lightbox="../assets/mollytrang.jpg">
+          </div>
+          <span class="fish-tag-code">DM-05</span>
+        </div>
+        <div class="fish-tag-body">
+          <h3>Molly Trắng</h3>
+          <span class="price">32.000₫ / cặp</span>
+          <p>Còn hàng — khoảng 110 cặp trong khay.</p>
+          <div class="fish-tag-cta"><a href="chi-tiet.html" class="btn btn-sm btn-dark">Xem chi tiết</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="two-col-cta">
+      <span class="eyebrow" style="color:var(--duck-yellow)">Mua số lượng lớn</span>
+      <h2>Cần trên 50 cặp để lên bể kinh doanh?</h2>
+      <p>Nhắn dòng cá và số lượng cần, dịt báo giá sỉ và xếp lịch giao trong tuần.</p>
+      <div class="hero-actions">
+        <a href="lien-he.html" class="btn btn-primary">Nhắn cho dịt</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h4>Dịt Molly</h4>
-        <p style="max-width:32ch;color:rgba(243,238,225,.65)">Trại cá Molly cảnh - nhân giống, tuyển lọc và giao hàng toàn quốc.</p>
+        <div class="footer-brand">
+          <img src="../assets/logo-ca.png" alt="Logo Dịt Molly">
+          <strong>Dịt Molly</strong>
+        </div>
+        <p>Trại cá Molly bột gây giống tại nhà — chọn kỹ từng con trước khi tới tay người nuôi.</p>
       </div>
       <div>
         <h4>Điều hướng</h4>
-        <a href="../index.html">Trang chủ</a>
-        <a href="gioi-thieu.html">Giới thiệu</a>
-        <a href="san-pham.html">Sản phẩm</a>
-        <a href="lien-he.html">Liên hệ</a>
+        <ul>
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a href="san-pham.html">Sản phẩm</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dòng cá</h4>
+        <ul>
+          <li>DM-01 Molly Vàng</li>
+          <li>DM-02 Molly Chanh</li>
+          <li>DM-03 Molly Sakura</li>
+          <li>DM-04 Molly Hổ</li>
+          <li>DM-05 Molly Trắng</li>
+        </ul>
       </div>
       <div>
         <h4>Liên hệ</h4>
-        <a href="tel:0900000000">090 000 0000</a>
-        <a href="mailto:[email protected]">[email protected]</a>
+        <ul>
+          <li>Zalo/ĐT:0327444643</li>
+          <li>TP Cần Thơ</li>
+          <li>7:00 – 19:00 mỗi ngày</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Dịt Molly. Dự án demo bán cá cảnh.</div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Dịt Molly. Đồ án kết thúc môn.</span>
+    </div>
   </div>
 </footer>
+
+<div class="lightbox"><button class="lightbox-close" aria-label="Đóng">✕</button><img src="" alt="Ảnh phóng to cá Molly"></div>
 
 <script src="../js/script.js"></script>
 </body>
